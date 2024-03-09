@@ -2,6 +2,7 @@
   "expo": {
     "name": "HerWay",
     "slug": "HerWay",
+    "scheme": "herway",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,20 +12,40 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dorororro.HerWay"
     },
     "android": {
+      "config": {
+        "googleMaps": { "apiKey": "AIzaSyD5960zRGCkdFdYlL62z41u2sH5-98Nzuc" }
+      },
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.dorororro.HerWay"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow HerWay to use your location."
+        }
+      ],
+      "expo-router"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "1722d867-c193-4a64-b270-d799c6bf151f"
+      }
     }
   }
 }
